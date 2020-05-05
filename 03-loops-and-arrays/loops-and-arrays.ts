@@ -45,6 +45,17 @@ let nizneki: Array<any> ;
 nizneki = babeIZabe;
 console.log("Niz nizneki :" + nizneki.join("--") + ' !!!');
 
-
+// petlja moze i sa while kao u javi ( obe varijante )
+// sa uslovom na pocetku, kada se blok koda izvrsi u zavisnosti od uslova ili kraju, kada se blok koda UVEK bar jednom izvrsi)
+let i = 0;
+while ( i<babeIZabe.length) {
+    console.log(babeIZabe[i]);
+    i++;
+}
+i = 0;
+do {
+    console.log(babeIZabe[i]);
+    i++;
+} while (i<babeIZabe.length);
 
 

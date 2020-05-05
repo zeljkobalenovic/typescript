@@ -1,11 +1,11 @@
 // klasicna for petlja 
-for (var i = 0; i < 5; i++) {
-    console.log(i);
+for (var i_1 = 0; i_1 < 5; i_1++) {
+    console.log(i_1);
 }
 // niz + petlja
 var grade = [5, 4, 2, 3.5, 4, 3.2]; // 
-for (var i = 0; i < grade.length; i++) {
-    console.log(grade[i]);
+for (var i_2 = 0; i_2 < grade.length; i_2++) {
+    console.log(grade[i_2]);
 }
 // skraceno for petlja ( kroz ceo niz )
 for (var _i = 0, grade_1 = grade; _i < grade_1.length; _i++) {
@@ -14,8 +14,8 @@ for (var _i = 0, grade_1 = grade; _i < grade_1.length; _i++) {
 }
 // sa nekom matematikom
 var total = 0;
-for (var i = 0; i < grade.length; i++) {
-    total = total + grade[i];
+for (var i_3 = 0; i_3 < grade.length; i_3++) {
+    total = total + grade[i_3];
 }
 var average = total / grade.length;
 console.log("Prosecna ocena je " + average.toFixed(4));
@@ -45,3 +45,15 @@ console.log("Niz babe i zabe  :" + babeIZabe.join("--") + ' !!!');
 var nizneki;
 nizneki = babeIZabe;
 console.log("Niz nizneki :" + nizneki.join("--") + ' !!!');
+// petlja moze i sa while kao u javi ( obe varijante )
+// sa uslovom na pocetku, kada se blok koda izvrsi u zavisnosti od uslova ili kraju, kada se blok koda UVEK bar jednom izvrsi)
+var i = 0;
+while (i < babeIZabe.length) {
+    console.log(babeIZabe[i]);
+    i++;
+}
+i = 0;
+do {
+    console.log(babeIZabe[i]);
+    i++;
+} while (i < babeIZabe.length);
