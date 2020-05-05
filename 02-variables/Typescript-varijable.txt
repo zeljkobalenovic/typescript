@@ -1,0 +1,40 @@
+VARIJABLE
+---------
+
+let [imevarijable] : [tipvarijable] = [pocetnavrednost]         - eksplicitno (deklarisanje + opciono dodavanje vrednosti)
+let [imevarijable] = [pocetnavrednost]                          - implicitno (samo dodeljivanje vrednosti)
+
+u javascript se koristi var , a u typescript let (za promenjive varijable) ili const (za fiksne - kao final u javi)
+let varijable se ponasaju isto kao u javi , dok var iz javascripta ima svoje specificnosti (scope, hoisting...)
+
+VAZNO !!!  zato UVEK : let ili const 
+const je isto kao let , ali se vrednost posle nemoze menjati i mora se eksplicitno deklarisati + odmah dodati vrednost
+
+Osnovni tipovi :
+----------------
+let found : boolean = true;
+let grade : number = 7.28;                  // number type je za sve ( cele i/ili decimalne ) brojeve
+let firstName : string = "zeljko";          // moze i jednostruki i dvostruki navodnici
+let lastName : string = 'balenovic';
+
+Ovako definisana varijabla prihvata samo promenjive svog tipa. Ne moze npr. found=100
+
+Moze kao u javi odvojeno deklaracija i dodeljivanje vrednosti (let moze - const mora odmah vrednost ovo nemoze)
+let grade : number;
+grade = 56;
+
+Osim ova tri osnovna koristi se type any - varijabla ovog tipa prihvata sve vrednosti 
+let x : any = true;
+x = "Pera";
+x = 56.2;
+Ovo moze sa any tipom , a nemoze sa gornja tri osnovna. Tamo bi kompajler javio gresku.
+
+Postoje jos neki manje upotrebljavani tipovi varijabli ( ova 4 najcesce se koriste )
+
+VAZNO !!! tsc kompajler po defaultu pravi js fajl IAKO IMA GRESKI. Ako necemo koristimo tsc -noEmitOnError sample-type.ts
+
+String template :
+-----------------
+console.log(`Welcome back  ${firstName} ${lastName}`);
+Jednostavnije od kontenkacije sa + . Promenjive se ubacuju kao gore ${imevarijable}. 
+NAPOMENA : Racunaju se i sva prazna mesta. Kako napisem u ts fajlu tako ispadne na ekranu.
