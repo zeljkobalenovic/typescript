@@ -1,0 +1,46 @@
+KLASE 
+=====
+
+class [imeklase] {
+    [properties...]
+    constructor 
+    [methods]
+}
+
+Ime klase po konvenciji je i ime fajla .ts ( u javi je OBAVEZNO ovde nije , ali UVEK tako pisati)
+Properties po DEFAULTU imaju public ( u javi je default package )
+Typescript ima 3 nivoa pristupa:
+    1   public (default) svi mogu pristupiti 
+    2   protected svi u klasi i subklasama(naslednicima)
+    3   private samo u klasi
+Klase u ts imaju samo JEDAN constructor (ako ga ne napisemo default je new imeklase()).
+Primeri definisanja i upotrebe klasa u Customer.ts:
+Customer    najjednostavnija varijanta (default konstruktor, default public pristup properties, bez metoda)
+Customer2   realniji slucaj (definisan konstruktor, private properties , geter+seter metode - kao u javi )
+Customer3   PARAMETER PROPERTIES kao 2 , ali krace koristeci construktor (ne moraju se navoditi properties)
+Customer4   kao 2 i 3 , ali sa accessor umesto geter+seter ( ovo nema u javi ) + za ovo je minimum ES5 javascript
+Customer5   kako treba knjiski nazive properties da vs code automatski generise accessore (ali onda neide konstruktor koji pravi properties)
+
+Ostalo je tsc config - konfigurisanje parametara kompajlera. Pravi se sa tsc -init (kad se napravi moze se menjati po potrebi)
+Kad postoji tsconfig.json sve u tom folderu i subfolderima se kompajlira sa obicnim tsc (ne nazvode se imena fajlova - kompajlira sve ts u folderu i subfolderima).
+Za cisto kompajliranje : tsc -clean -build (ovo brise sve js fajlove prethodno napravljene) + tsc (ovo ih ponovo pravi)
+
+ZAKLJUCAK : Klase praviti na sledeca dva macina vidi : 03-class-final -> Person.ts
+
+
+MODULI
+======
+primer u 05-modules
+
+Jedan fajl ( Modul ) moze da export-uje classe,funkcije,varijable...
+Drugi fajl moze da import-uje te class,funkcije,varijable... iz modula
+
+Person.ts je klasa koja ima export (znaci spremna je za koriscenje bilo gde ) - modul
+Driver.ts je obican ts program koji koristi klasu Person (da bi je koristio mora da je importuje )
+
+U komplikovanijim scenarijima (npr. angular) pravi se poseban fajl module.ts koji importuje sve sto treba , a eksportuje sebe cime sve importovano postaje dostupno svima koji importuju taj modul. U angularu se npr. uvek izvrsava fajl main.ts , a on importuje fajl appmodule ( koji je prethodno importovao sve komponente ... ) pa ih sad exportuje.Time su sve napisane komponente, servisi, direktive... dostupni za izvrsavanje glavnom programu main.ts.
+
+ZAKLJUCAK : ako nesto (klasu,funkciju, varijablu ... ) hocemo da bude dostupno u drugim fajlovima stavimo export
+            tamo gde hocemo to da koristimo stavimo import (navedemo sta i odakle - relativnu putanju)
+
+

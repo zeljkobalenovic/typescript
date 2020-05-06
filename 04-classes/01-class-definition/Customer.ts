@@ -1,7 +1,7 @@
 // ime klase kao ime ts fajla ( NIJE OBAVEZNO )
 class Customer {    
-    firstName : string;
-    lastName : string;
+    firstName: string | undefined;
+    lastName: string | undefined;
 }
 
 // Pravljenje instance klase ( default constructor )

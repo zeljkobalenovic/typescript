@@ -1,3 +1,4 @@
+"use strict";
 // ime klase kao ime ts fajla ( NIJE OBAVEZNO )
 var Customer = /** @class */ (function () {
     function Customer() {
