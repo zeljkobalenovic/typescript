@@ -43,4 +43,15 @@ U komplikovanijim scenarijima (npr. angular) pravi se poseban fajl module.ts koj
 ZAKLJUCAK : ako nesto (klasu,funkciju, varijablu ... ) hocemo da bude dostupno u drugim fajlovima stavimo export
             tamo gde hocemo to da koristimo stavimo import (navedemo sta i odakle - relativnu putanju)
 
+INHERITANCE,ABSTRACT CLASS,INTERFACES
+=====================================
+Sve je isto kao u javi.
+Klasa moze da nasledi (extenduje) samo JEDNU klasu , a moze da implementira VISE interfejsa.
+
+Abstract klase kao i u javi su obicne koje neki metod nisu implementirale (imaju samo body metode)
+Klasa koja extenduje abstraktnu MORA da implementira metode ili je i sama 
+
+Interfejsi imaju samo body metode/metoda.
+Klasa koja hoce da implementira interfejs mora da implementira SVE metode.
+
 
