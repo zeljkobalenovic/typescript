@@ -53,5 +53,7 @@ class Person2 {
 let person2 = new Person2('Marija','LJubicic'); // implicitan tip
 person2.firstName='Darija';
 console.log(person2.lastName);
+
+
 // ... itd.
 //--------------------------------------------------------------------------------------------------------------------
